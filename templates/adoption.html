@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adoption</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <!-- Barre de navigation -->
+  <div class="navbar-conteneur">
+    <nav class="barre-items">
+      <div>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/adoption">Mise en adoption</a></li>
+        </ul>
+      </div>
+      <!-- Barre de Recherche -->
+      <div class="barre-recherche">
+        <form action="/recherche" method="post" target="_blank">
+          <input type="text" name="recherche" placeholder="Rechercher..." />
+          <button type="submit">Rechercher</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+  <!-- Formulaire -->
+  <div class="conteneur">
+    <h1>Formulaire pour mettre un animal en adoption</h1>
+    <form id="form" action="/adoption" method="POST">
+      <!-- Nom de l'animal -->
+      <div class="controle-form">
+        <label for="nomAnimal">Nom :</label>
+        <input type="text" id="nomAnimal" name="nomAnimal" placeholder="Nom de l'animal" />
+        <div class="erreur"></div>
+      </div>
+      <!-- Espèce de l'animal -->
+      <div class="controle-form">
+        <label for="especeAnimal">Espèce :</label>
+        <input type="text" id="especeAnimal" name="especeAnimal" placeholder="Espèce de l'animal" />
+        <div class="erreur"></div>
+      </div>
+      <!-- Race de l'animal -->
+      <div class="controle-form">
+        <label for="raceAnimal">Race :</label>
+        <input type="text" id="raceAnimal" name="raceAnimal" placeholder="Race de l'animal" />
+        <div class="erreur"></div>
+      </div>
+      <!-- Âge de l'animal -->
+      <div class="controle-form">
+        <label for="ageAnimal">Âge :</label>
+        <input type="text" id="ageAnimal" name="ageAnimal" placeholder="Âge de l'animal" />
+        <div class="erreur"></div>
+      </div>
+      <!-- Description de l'animal -->
+      <div class="controle-form">
+        <label for="descriptionAnimal">Description :</label>
+        <input type="text" id="descriptionAnimal" name="descriptionAnimal" placeholder="Description de l'animal" />
+        <div class="erreur"></div>
+      </div>
+      <!-- Courriel du propriétaire -->
+      <div class="controle-form">
+        <label for="courrielProprietaire">Courriel :</label>
+        <input type="text" id="courrielProprietaire" name="courrielProprietaire"
+          placeholder="Courriel du propriétaire" />
+        <div class="erreur"></div>
+      </div>
+      <!-- Adresse Civique -->
+      <div class="controle-form">
+        <label for="adresseCivique">Adresse Civique :</label>
+        <input type="text" id="adresseCivique" name="adresseCivique" placeholder="Adresse Civique" />
+        <div class="erreur"></div>
+      </div>
+      <!-- Ville -->
+      <div class="controle-form">
+        <label for="ville">Ville :</label>
+        <input type="text" id="ville" name="ville" placeholder="Ville" />
+        <div class="erreur"></div>
+      </div>
+      <!-- Code Postal -->
+      <div class="controle-form">
+        <label for="codePostal">Code Postal :</label>
+        <input type="text" id="codePostal" name="codePostal" placeholder="Code Postal" />
+        <div class="erreur"></div>
+      </div>
+      <!-- bouton Soumettre -->
+      <div class="controle-form">
+        <button type="submit">Soumettre</button>
+      </div>
+    </form>
+  </div>
+  <!-- Script  -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

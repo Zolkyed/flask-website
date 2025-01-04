@@ -1,0 +1,113 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: #86E0E0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.barre-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.barre-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.barre-items li {
+  margin-right: 15px;
+}
+
+.barre-items a {
+  color: #fff;
+}
+
+.animaux-aleatoire,
+.resultats-recherche,
+.conteneur,
+.informations-animal,
+.informations-contact {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.animaux-aleatoire h1,
+.conteneur h1,
+.informations-animal h2,
+.informations-contact h2 {
+  font-size: 25px;
+  margin: 0 0 10px;
+}
+
+.animaux-aleatoire li {
+  padding: 5px 0;
+}
+
+.controle-form {
+  margin-bottom: 15px;
+}
+
+.controle-form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.controle-form .erreur {
+  color: red;
+  font-size: 0.9em;
+}
+
+.controle-form button,
+.barre-recherche button {
+  padding: 4px  5px;
+  border: none;
+  background-color: #b4afafc5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controle-form button:hover,
+.barre-recherche button:hover {
+  background-color: #86E0E0;
+}
+
+.erreur-404 h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.erreur-404 p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.erreur-404 a {
+  color: #ffffff;
+}
+
+input:not(:placeholder-shown) {
+  background-color: #e8f0fe;
+}

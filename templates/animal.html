@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ animal["nom"] }}</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <!-- Barre de navigation -->
+  <div class="navbar-conteneur">
+    <nav class="barre-items">
+      <div>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/adoption">Mise en adoption</a></li>
+        </ul>
+      </div>
+      <!-- Barre de Recherche -->
+      <div class="barre-recherche">
+        <form action="/recherche" method="post" target="_blank">
+          <input type="text" name="recherche" placeholder="Rechercher..." />
+          <button type="submit">Rechercher</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+  <!-- Informations animal -->
+  <div class="informations-animal">
+    <h2>Informations de l'animal</h2>
+    <p>Nom : {{ animal["nom"] }}</p>
+    <p>Espèce : {{ animal["espece"] }}</p>
+    <p>Race : {{ animal["race"] }}</p>
+    <p>Âge : {{ animal["age"] }}</p>
+    <p>Description : {{ animal["description"] }}</p>
+  </div>
+  <!-- Informations de contact -->
+  <div class="informations-contact">
+    <h2>Informations de contact</h2>
+    <p>Courriel : <a href="mailto:{{ animal['courriel'] }}">{{ animal['courriel'] }}</a></p>
+    <p>Adresse : {{ animal["adresse"] }}, {{ animal["ville"] }}, QC, {{ animal["cp"] }}</p>
+  </div>
+</body>
+
+</html>

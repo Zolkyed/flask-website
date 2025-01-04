@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Recherche</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <!-- Barre de navigation -->
+  <div class="navbar-conteneur">
+    <nav class="barre-items">
+      <div>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/adoption">Mise en adoption</a></li>
+        </ul>
+      </div>
+      <!-- Barre de Recherche -->
+      <div class="barre-recherche">
+        <form action="/recherche" method="post" target="_blank">
+          <input type="text" name="recherche" placeholder="Rechercher..." />
+          <button type="submit">Rechercher</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+  <!-- Résultats de recherche -->
+  <div class="resultats-recherche">
+    <h1>Résultats de votre recherche</h1>
+    {% if animaux_trouves %}
+    {% for animal in animaux_trouves %}
+    <div>
+      <p>{{ animal["nom"] }} - {{ animal["description"] }} - <a href="/animal/{{ animal['id'] }}"
+          target="_blank">lien</a></p>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>Aucun animal trouvé.</p>
+    {% endif %}
+  </div>
+</body>
+
+</html>

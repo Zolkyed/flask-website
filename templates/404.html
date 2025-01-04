@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erreur 404</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <!-- Barre de navigation -->
+  <div class="navbar-conteneur">
+    <nav class="barre-items">
+      <div>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/adoption">Mise en adoption</a></li>
+        </ul>
+      </div>
+      <!-- Barre de Recherche -->
+      <div class="barre-recherche">
+        <form action="/recherche" method="post" target="_blank">
+          <input type="text" name="recherche" placeholder="Rechercher..." />
+          <button type="submit">Rechercher</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+  <!-- Erreur 404 -->
+  <div class="erreur-404">
+    <h1>Page Non Trouvée - Erreur 404</h1>
+    <p>Retourner à la <a href="/">Page d'Accueil</a></p>
+  </div>
+</body>
+
+</html>
